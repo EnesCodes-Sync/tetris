@@ -7,15 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="tetris" width="300" height="600"></canvas>
-        <div id="sidebar">
-            <div id="next"></div>
-            <div id="hold"></div>
-            <div id="score">Skor: 0</div>
-            <div id="level">Seviye: 1</div>
-            <div id="lines">Satır: 0</div>
+    <div id="main-container">
+        <div id="game-area">
+            <canvas id="tetris" width="320" height="704"></canvas>
+            <div id="pause-overlay" class="hidden">DURAKLATILDI</div>
+            <div id="game-over-overlay" class="hidden">OYUN BİTTİ</div>
         </div>
+        <aside id="sidebar">
+            <div class="panel">
+                <h2>Sonraki Parçalar</h2>
+                <div id="next-pieces"></div>
+            </div>
+            <div class="panel">
+                <h2>Tutulan</h2>
+                <div id="hold-piece"></div>
+            </div>
+            <div class="panel stats">
+                <div id="score">Skor: 0</div>
+                <div id="level">Seviye: 1</div>
+                <div id="lines">Satır: 0</div>
+            </div>
+            <div class="panel">
+                <button id="pause-btn">Duraklat</button>
+                <button id="restart-btn">Yeniden Başlat</button>
+            </div>
+        </aside>
     </div>
     <script src="tetris.js"></script>
 </body>
